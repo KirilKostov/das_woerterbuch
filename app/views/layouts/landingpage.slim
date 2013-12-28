@@ -6,6 +6,12 @@ html class="no-js"
     = javascript_include_tag "application"
     = csrf_meta_tags
   body class="landing"
+  	h1 Das Worterbuch
+  	span Online German vocabulary book
+  	div
+  		a href="/users/new" register 
+  		a href="/session/new" login
+  	footer Das Worterbuch/2014
     
     - flash.each do |name, msg|
       = content_tag :div, msg
