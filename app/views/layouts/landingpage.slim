@@ -1,0 +1,17 @@
+doctype html
+html class="no-js"
+  head
+    title Das Wörterbuch
+    = stylesheet_link_tag    "landingpage", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  body
+    header
+      h1 Das Wōrterbuch
+      div Online German vocabulary book.
+    
+    footer Das Wörterbuch / 2014
+
+    - flash.each do |name, msg|
+      = content_tag :div, msg
+    == yield
